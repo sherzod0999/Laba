@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оставить заявку</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+           $("#top").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1500);
+           });
+       });
+       </script>
+</head>
+
+
+<body id="top">
+        <a href="#top" class="toTheTop shadow" >Наверх</a>
+        <div class="container">
+            <header class="header" id="menu">
+                <ul class="navbar">
+                        <li class="navitem"><a href="index.html" class="nav-link">Магазин</a></li>
+                    <li class="navitem"><a href="#catalog" onclick="smoothScroll('catalog')" class="nav-link">Ассортимент</a></li>
+                    <li class="navitem"><a href="#description" onclick="smoothScroll('description')" class="nav-link">Описание </a></li>
+                    <li class="navitem"><a href="#form" onclick="smoothScroll('form')" class="nav-link">Вопрос</a></li>
+                    <li class="navitem"><a href="#" class="nav-link">Каталог</a></li>
+                    <li class="navitem"><a href="#" class="nav-link">Контакты</a></li>
+                    <li class="navitem"><a href="#" class="nav-link">Карта</a></li>
+                </ul>
+            </header>
+
+
+
+
+    
+        <div class="form-container" >
+                <h1 class="title-form" id="form">Связаться с нами</h1>
+                <p class="text-form">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <br> Lorem ipsum dolor sit amet consectetur
+                </p>
+                <div class="inputs-top">
+                    <input type="text" class="top-i" placeholder="Your Name">
+                    <input type="text" class="top-i" placeholder="Your Email">
+                </div>
+                <div class="input-bot">
+                    <input type="text" class="title-inp" placeholder="Your Password">
+                    
+                    <textarea type="text" class="comment-inp" placeholder="Your Comment"></textarea>
+                    <a href="#" class="red-btn">Перейти</a>
+                </div>
+            </div>
+
+
+            <footer class="footer">
+
+                    <div class="menu-left">
+                        <p class="menu__title">Tula State</p>
+            
+                        <a href="#" class="menu__link">© Все права защищены</a>
+                        
+        
+                    </div>
+                    
+                    <div class="menu">
+                        
+            
+                        <a href="#" class="menu__link">vadaimpwnz228@hmail.com</a>
+                        <a href="#" class="menu__link">88005553535</a>
+        
+                    </div>
+                    <div class="menu">
+                   
+            
+                        <a href="#" class="menu__link">Projects</a>
+                        <a href="#" class="menu__link">About</a>
+                        <a href="#" class="menu__link">Service</a>
+                        <a href="#" class="menu__link">Carier</a>
+        
+                    </div>
+                    <div class="menu" style="margin-left: -100px;">
+                           
+                
+                            <a href="#" class="menu__link">News</a>
+                            <a href="#" class="menu__link">Events</a>
+                            <a href="#" class="menu__link">Legals</a>
+                            <a href="#" class="menu__link">Contact</a>
+        
+                        </div>
+                    <div class="menu">
+                           
+                
+                        <a href="#" class="menu__link">Facebook</a>
+                        <a href="#" class="menu__link">Twitter</a>
+                        <a href="#" class="menu__link">Instagram</a>
+                        <a href="#" class="menu__link">Dribbble</a>
+            
+                    </div>
+        
+                    </footer>
+        </div>  
+
+</body>
+</html>

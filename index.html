@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    
+    	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $("#menu").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+       $("#top").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+   });
+   </script>
+    
+
+    <title>E-PRO</title>
+</head>
+<body id="top">
+        <body id="top">
+
+        
+    <div class="container">
+        <header class="header" id="menu">
+            <ul class="navbar">
+                <li class="navitem"><a href="#" class="nav-link">EMINEM-PRO</a></li>
+                <li class="navitem"><a href="#catalog" onclick="smoothScroll('catalog')" class="nav-link">Новости</a></li>
+                <li class="navitem"><a href="#description" onclick="smoothScroll('description')" class="nav-link">Помощь </a></li>
+                <li class="navitem"><a href="#form" onclick="smoothScroll('form')" class="nav-link">Вопрос</a></li>
+                <li class="navitem"><a href="catalog.html" class="nav-link">Альбомы</a></li>
+                <li class="navitem"><a href="forma.html" class="nav-link">Контакты</a></li>
+                <li class="navitem"><a href="map.html" class="nav-link">Карта</a></li>
+            </ul>
+        </header>
+
+        <div class="desck-container">
+            <div class="hero">
+                <h1 class="hero__title"></h1>
+                <p class="hero__slogan"></p>
+        
+            </div>
+        
+        <h1 class="title" style="text-align: center;">E-PRO 2019</h1>
+        <h1 class="description" style="text-align: center;">
+            Позвольте представиться, Eminem.Pro!! </h1>
+        <ol class="spisok" style="margin-left: 20%;   font-weight:100;
+        font-size: 1.4em;">
+       
+    </ol>
+       <h1 class="title" style="text-align: center;"> Eminem.pro освещает весь поток информации, которая так или иначе связана с Eminem’ом и его лейблом Shady Records.
+           <br> Наши информационные источники — официальные сайты исполнителей, их профили в социальных сетях, а также ведущие издания мира о музыкальной индустрии</h1>
+
+    
+        </h2>
+        <h1 class="title " id="catalog">Новости</h1>
+        </div>
+        <div class="tov-con">
+        
+        <div class="tovar-blocks top">
+
+            <div class="tovar-block">
+                <img class="tovar"  src="https://www.eminem.pro/wp-content/uploads/2015/12/2015.12.17-Eminem-Star-Wars.jpg" alt="putin">
+                <h1 class="title-tov">“Recovery” вернулся в альбомный чарт iTunes США</h1>
+                <p class="desc-tov">Альбом, который дебютировал в 2010 году на втором месте в iTunes и оставался в топах 280 дней, снова вошёл в первую сотню в прошлую пятницу. 15 ноября. </p>
+            </div>    
+            <div class="tovar-block">
+                <img class="tovar"  src="https://www.eminem.pro/wp-content/uploads/2019/11/eminem-2010-e1573992661550.jpg" alt="putin">
+                <h1 class="title-tov">Эминем занял 8 позицию в Billboard</h1>
+                <p class="desc-tov">Эминем занял 8 позиций в итоговых чартах десятилетия от Billboard  Его альбомы занимают три строчки в Billboard, он вошёл в Top 100 Artists и, конечно же, его имя вошло во все три жанра.</p>
+            </div>  
+            <div class="tovar-block">
+                <img class="tovar" src="https://www.eminem.pro/wp-content/uploads/2019/11/Eminem-vs-Triumph-Insult-Comic-Dog-2002.jpg" alt="putin">
+                <h1 class="title-tov">Bидео «Ass Like That» набрал 100 миллион просмотров.</h1>
+                <p class="desc-tov">Видео на одну из «дурашливых» песен с альбома «Encore» было просмотрено более 100 миллионов раз за 10 лет с момента как оно было загружено на официальный канал Эминема.</p>
+            </div>   
+            <div class="tovar-block">
+                <img class="tovar" src="https://www.eminem.pro/wp-content/uploads/2019/11/encore-lilit-rus.jpg" alt="putin">
+                <h1 class="title-tov">Encore: помните Эма на таблетках? Взгляд 15 лет спустя</h1>
+                <p class="desc-tov">«Encore 2004» — пятый студийный альбом Маршалла в этом году отмечает пятнадцатилетие. Одна из самых скандальных музыкальных пластинок Эма была встречена довольно негативно, но имела большой коммерческий успех. Какой она запомнилась вам?.</p>
+                
+            </div>   
+          
+
+    
+          
+
+        </div>
+    </div>
+<div class="disc-conteiner" id="description">
+        
+
+
+    </div>
+
+
+    <div class="form-container" >
+        <h1 class="title-form" id="form">Хотите узнать больше?</h1>
+        <p class="text-form">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <br> Lorem ipsum dolor sit amet consectetur
+        </p>
+        <div class="inputs-top">
+            <input type="text" class="top-i" placeholder="Ваше Имя">
+            <input type="text" class="top-i" placeholder="Ваш Email">
+        </div>
+        <div class="input-bot">
+            <input type="text" class="title-inp" placeholder="Ваш вопрос">
+            
+            <textarea type="text" class="comment-inp" placeholder="Что вы хотели бы узнать?"></textarea>
+            <a href="#" class="red-btn">Отправить </a>
+        </div>
+    </div>
+
+            
+    <footer class="footer">
+
+            <div class="menu-left">
+                <p class="menu__title">Eminem.Pro © 2011 — 2019</p>
+    
+                <a href="#" class="menu__link">ePro — cделано фанатами для фанатов!
+                    С уважением, команда ePro Team.</a>
+                
+
+            </div>
+            
+            <div class="menu">
+                
+    
+                <a href="#" class="menu__link">sherzod0999@bk.ru</a>
+                <a href="#" class="menu__link">89157886954</a>
+
+            
+    
+                
+           
+
+                </div>
+            <div class="menu">
+                   
+        
+                <a href="#" class="menu__link">Facebook</a>
+                <a href="#" class="menu__link">Twitter</a>
+                <a href="#" class="menu__link">Instagram</a>
+            h
+    
+            </div>
+
+            </footer>
+        
+        
+
+
+
+
+
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

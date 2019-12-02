@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+
+
+    
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" ></script>
+    <script src="https://js.cit.api.here.com/v3/3.0/mapsjs-places.js" type="text/javascript" ></script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $("#menu").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+       $("#top").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+   });
+   </script>
+    <title>Карта</title>
+</head>
+<body  id="top">
+        <a href="#top" class="toTheTop shadow">Наверх</a>
+        <div class="container map-container">
+            <header class="header" id="menu">
+                <ul class="navbar">
+                        <li class="navitem"><a href="index.html" class="nav-link">Магазин</a></li>
+                    <li class="navitem"><a href="#catalog" onclick="smoothScroll('catalog')" class="nav-link">Ассортимент</a></li>
+                    <li class="navitem"><a href="#description" onclick="smoothScroll('description')" class="nav-link">Описание </a></li>
+                    <li class="navitem"><a href="#form" onclick="smoothScroll('form')" class="nav-link">Вопрос</a></li>
+                    <li class="navitem"><a href="#" class="nav-link">Каталог</a></li>
+                    <li class="navitem"><a href="forma.html" class="nav-link">Контакты</a></li>
+                    <li class="navitem"><a href="map.html" class="nav-link">Карта</a></li>
+                </ul>
+            </header>
+
+            <h1 class="map-title">Карта</h1>
+            <div class="mapContainer" id="mapContainer"></div>
+
+            <footer class="footer">
+
+                    <div class="menu-left">
+                        <p class="menu__title">Tula State</p>
+            
+                        <a href="#" class="menu__link">© Все права защищены</a>
+                        
+        
+                    </div>
+                    
+                    <div class="menu">
+                        
+            
+                        <a href="#" class="menu__link">vadaimpwnz228@hmail.com</a>
+                        <a href="#" class="menu__link">88005553535</a>
+        
+                    </div>
+                    <div class="menu">
+                   
+            
+                        <a href="#" class="menu__link">Projects</a>
+                        <a href="#" class="menu__link">About</a>
+                        <a href="#" class="menu__link">Service</a>
+                        <a href="#" class="menu__link">Carier</a>
+        
+                    </div>
+                    <div class="menu" style="margin-left: -100px;">
+                           
+                
+                            <a href="#" class="menu__link">News</a>
+                            <a href="#" class="menu__link">Events</a>
+                            <a href="#" class="menu__link">Legals</a>
+                            <a href="#" class="menu__link">Contact</a>
+        
+                        </div>
+                    <div class="menu">
+                           
+                
+                        <a href="#" class="menu__link">Facebook</a>
+                        <a href="#" class="menu__link">Twitter</a>
+                        <a href="#" class="menu__link">Instagram</a>
+                        <a href="#" class="menu__link">Dribbble</a>
+            
+                    </div>
+        
+                    </footer>
+
+        </div>
+
+
+
+        <script> 
+                // Initialize the platform object: 
+                
+                var platform = new H.service.Platform({ 
+                'app_id': 'JjKDgHDwcuNrLgpHX3Pi', 
+                'app_code': 'XL976WWGkOKqTDDAUSytcw',
+                useCIT: true,
+                useHTTPS: true
+                }); 
+                
+                // Obtain the default map types from the platform object 
+                var maptypes = platform.createDefaultLayers(); 
+                
+                // Instantiate (and display) a map object: 
+                var map = new H.Map( 
+                document.getElementById('mapContainer'), 
+                maptypes.normal.map, 
+                { 
+                zoom: 17, 
+                center: { lat: 54.198981, lng: 37.616454 } 
+                }); 
+                var mapEvents = new H.mapevents.MapEvents(map);
+                var behavior = new H.mapevents.Behavior(mapEvents);
+                var svgMarkup = '<svg width="24" height="24" ' +
+                'xmlns="https://www.w3.org/2000/svg">' +
+                '<rect stroke="white" fill="#1b468d" x="1" y="1" width="22" ' +
+                'height="22" /><text x="12" y="18" font-size="12pt" ' +
+                'font-family="Arial" font-weight="bold" text-anchor="middle" ' +
+                'fill="white">H</text></svg>';
+               // var bubble = new H.ui.InfoBubble({lat: 54.197952, lng: 37.617066 }, {
+                 //   content: '<b> </b>'
+               // });
+                // Create an icon, an object holding the latitude and longitude, and a marker:
+                
+                var icon = new H.map.Icon('https://image.flaticon.com/icons/png/512/34/34468.png', {
+                  size: {w: 50, h: 50},
+                  
+                });
+                coords =  { lat: 54.197952, lng: 37.617066 } , 
+                marker = new H.map.Marker(coords, {icon: icon});
+               
+                
+                // Add the marker to the map and center the map at the location of the marker:
+                map.addObject(marker);
+                map.setCenter(coords);
+           
+               // ui.addBubble(bubble);
+        </script>
+</body>
+</html>
